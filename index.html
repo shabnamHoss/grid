@@ -1,57 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i" rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
-        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+	<link rel="shortcut icon" type="image/png" href="img/favicon.png">
+	<title>CSS Grids Gallery</title>
+</head>
 
-        <title>CSS Grids Gallery</title>
-    </head>
-    <body>
-        <div class="container">
-            <div class="gallery">
-                <figure class="gallery__item gallery__item--1">
-					<div class="gallery__content">
-						<a href="page3.html"><img src="img/5.jpg.jpg" alt="KUC" class="gallery__img"></a>
-						<div class="accordion">
-							<input type="checkbox" id="accordion-1" class="accordion__checkbox">
-							<label for="accordion-1" class="accordion__label">Brief Detail 1</label>
-							<div class="accordion__content">
-							<p>Here is a brief detail about the first image.</p>
-							</div>
-						</div>
-					  </div>
-                </figure>
-                <figure class="gallery__item gallery__item--2">
-					<img src="img/2.jpg.jpg" alt="Walker-Library" class="gallery__img">
-                </figure>
-                <figure class="gallery__item gallery__item--3">
-                    <img src="img/3.jpg.jpg" alt="COE" class="gallery__img">
-                </figure>
-                <figure class="gallery__item gallery__item--4">
-					<img src="img/4.jpg.jpg" alt="Digital-Learning" class="gallery__img">
-                </figure>
-                <figure class="gallery__item gallery__item--5">
-                    <img src="img/5.jpg.jpg" alt="Academic-Classrooms-Building" class="gallery__img">
-                </figure>
-                <figure class="gallery__item gallery__item--6">
-					<img src="img/6.jpg.jpg" alt="Walnut-Grove" class="gallery__img">
-                </figure>
-            </div>
+<body>
+	<div class="container">
+		<div class="gallery">
+			<figure class="gallery__item gallery__item--1">
+				
+					<a href="page3.html"><img src="img/5.jpg.jpg" alt="KUC" class="gallery__img"></a>
+          
+					<div class="accordion">
+						<input type="checkbox" id="accordion-1" class="accordion__checkbox">
+						<label for="accordion-1" class="accordion__label">Brief Detail 1</label>
+            <label for="accordion-1" class="accordion__label accordion__content">
+                <p>Here is a brief detail about the first image.</p>
+            </label>
+					</div>
+				
+			</figure>
+			<figure class="gallery__item gallery__item--2">
+				<img src="img/2.jpg.jpg" alt="Walker-Library" class="gallery__img">
+
+        <div class="accordion">
+          <input type="checkbox" id="accordion-2" class="accordion__checkbox">
+          <label for="accordion-2" class="accordion__label">Brief Detail 2</label>
+          <label for="accordion-2" class="accordion__label accordion__content">
+              <p>Here is a brief detail about the first image.</p>
+          </label>
+        </div>
+
+			</figure>
+			<figure class="gallery__item gallery__item--3">
+				<img src="img/3.jpg.jpg" alt="COE" class="gallery__img">
+			</figure>
+			<figure class="gallery__item gallery__item--4">
+				<img src="img/4.jpg.jpg" alt="Digital-Learning" class="gallery__img">
+			</figure>
+			<figure class="gallery__item gallery__item--5">
+				<img src="img/5.jpg.jpg" alt="Academic-Classrooms-Building" class="gallery__img">
+			</figure>
+			<figure class="gallery__item gallery__item--6">
+				<img src="img/6.jpg.jpg" alt="Walnut-Grove" class="gallery__img">
+			</figure>
 		</div>
-		<script>
-    const accordionTabs = document.getElementsByClassName('accordion-tab');
+	</div>
 
-    Array.from(accordionTabs).forEach(tab => {
-      tab.addEventListener('click', () => {
-        const content = tab.nextElementSibling;
-        content.style.display = content.style.display === 'none' ? 'block' : 'none';
-      });
-    });
-  </script>
-    </body>
+</body>
+
 </html>
